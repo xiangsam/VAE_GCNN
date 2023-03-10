@@ -209,7 +209,7 @@ if __name__ == '__main__':
     else:
         dataset = ShiDataset('data/shi.txt')
         torch.save(dataset, 'data/shi.pth')
-    # train(dataset)
+    train(dataset)
     shi_model = torch.load('checkpoint/model.pt')
     for i in range(10):
         generate(shi_model, dataset)
